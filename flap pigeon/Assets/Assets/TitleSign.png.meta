@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 0c9a29465bfc7864b86671b6c11ac27c
+guid: d9309943704a44a4691357355abc1741
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8241265032994891965
-    second: Gerry-Sheet_0
-  - first:
-      213: -7924927515607348962
-    second: Gerry-Sheet_1
+      213: -5859815114420940377
+    second: TitleSign_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gerry-Sheet_0
+      name: TitleSign_0
       rect:
         serializedVersion: 2
         x: 9
         y: 9
-        width: 142
-        height: 132
+        width: 2542
+        height: 1262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 347dd78dd1521ad80800000000000000
-      internalID: -8241265032994891965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gerry-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 189
-        y: 9
-        width: 122
-        height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e194181a960050290800000000000000
-      internalID: -7924927515607348962
+      spriteID: 7a199773331cdaea0800000000000000
+      internalID: -5859815114420940377
       vertices: []
       indices: 
       edges: []
@@ -172,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Gerry-Sheet_0: -8241265032994891965
-      Gerry-Sheet_1: -7924927515607348962
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
