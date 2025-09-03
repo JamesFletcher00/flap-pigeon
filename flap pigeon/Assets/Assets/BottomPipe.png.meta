@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 0c9a29465bfc7864b86671b6c11ac27c
+guid: 1f9ebe365250eec44a1db9c2414a92d2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8241265032994891965
-    second: Gerry-Sheet_0
-  - first:
-      213: -7924927515607348962
-    second: Gerry-Sheet_1
+      213: -7428641225513109574
+    second: BottomPipe_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gerry-Sheet_0
+      name: BottomPipe_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 9
-        width: 142
-        height: 132
+        x: 69
+        y: 0
+        width: 182
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 347dd78dd1521ad80800000000000000
-      internalID: -8241265032994891965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Gerry-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 189
-        y: 9
-        width: 122
-        height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e194181a960050290800000000000000
-      internalID: -7924927515607348962
+      spriteID: ab7f77df92a28e890800000000000000
+      internalID: -7428641225513109574
       vertices: []
       indices: 
       edges: []
