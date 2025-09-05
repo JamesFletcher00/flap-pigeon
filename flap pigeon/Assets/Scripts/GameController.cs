@@ -1,16 +1,24 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float moveSpeed = 2f;
+    public string tagToMove = "Background";
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        GameObject[] objects = GameObject.FindGameObjectsWithTag(tagToMove);
+        foreach (GameObject obj in objects)
+        {
+            obj.transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        }
+
     }
 }
