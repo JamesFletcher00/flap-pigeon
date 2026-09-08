@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
    void Start()
     {
         canvas.SetActive(false);
+        
         // Calculate screen boundaries
         Camera cam = Camera.main;
         screenBounds = cam.orthographicSize * cam.aspect;
