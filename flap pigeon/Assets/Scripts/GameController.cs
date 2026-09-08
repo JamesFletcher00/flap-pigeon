@@ -10,8 +10,9 @@ public class GameController : MonoBehaviour
     private GameObject[] activeTiles;
     private float tileWidth;
     private float screenBounds;
-    public float pipeMoveSpeed = 2f;
+    public float pipeMoveSpeed = 6f;
     public string pipeTagToMove = "Pipe";
+    
 
    void Start()
     {

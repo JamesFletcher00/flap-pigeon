@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float flapForce = 5f;
     private Rigidbody2D rb;
     void Start()
     {
@@ -12,9 +11,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(transform.up * flapForce);
+            rb.linearVelocityY = 5;
         }
     }
 }
