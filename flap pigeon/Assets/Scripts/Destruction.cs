@@ -12,7 +12,7 @@ public class Destruction : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Pipe"))
+        if (other.CompareTag("Pipes"))
         {
             float newY = Random.Range(minY, maxY);
             other.transform.position = new Vector3(pipeResetX, newY, other.transform.position.z);

@@ -1,21 +1,26 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class GameController : MonoBehaviour
 {
     [SerializeField] private GameObject tilePrefab;
     [SerializeField] private float scrollSpeed = 5f;
+    public PlayerController PC;
 
     private GameObject[] activeTiles;
     private float tileWidth;
     private float screenBounds;
-    public float pipeMoveSpeed = 6f;
-    public string pipeTagToMove = "Pipe";
+    private float pipeMoveSpeed = 6f;
+    private string pipeTagToMove = "Pipes";
+    public bool gameOver = false;
+    public GameObject canvas;
     
 
    void Start()
     {
+        canvas.SetActive(false);
         // Calculate screen boundaries
         Camera cam = Camera.main;
         screenBounds = cam.orthographicSize * cam.aspect;
@@ -73,6 +78,22 @@ public class GameController : MonoBehaviour
             pip.transform.Translate(Vector2.left * pipeMoveSpeed * Time.deltaTime);
         }
         
+        if(gameOver)
+        {
+            GameOver();
+        }
+    }
+    void GameOver()
+    {
+        Time.timeScale = 0;
+        canvas.SetActive(true);
+
+    }
+    public void StartGame()
+    {
+        Time.timeScale = 1;
+        gameOver = false;
+        canvas.SetActive(false);
     }
     
 }

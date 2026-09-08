@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Background
   - Pipe
+  - Pipes
+  - Score
+  - HighScore
   layers:
   - Default
   - TransparentFX
