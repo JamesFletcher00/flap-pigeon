@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
     public TMP_Text EndGameScore;
     public TMP_Text HighScore;
     public float Score;
-    public float highScore;
+    public static float highScore;
     
 
    void Start()
