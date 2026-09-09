@@ -9,19 +9,25 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] private GameObject tilePrefab;
     [SerializeField] private float scrollSpeed = 5f;
+    [Header("Other Scripts")]
     public PlayerController PC;
-
+    public StartGameScript SGS;
+    [Header("Game Objects")]
     private GameObject[] activeTiles;
+    public SpriteRenderer Bread;
     private float tileWidth;
     private float screenBounds;
     private float pipeMoveSpeed = 6f;
     private string pipeTagToMove = "Pipes";
+    [Header("End Game")]
     public bool gameOver = false;
+    [Header("UI Elements")]
     public GameObject canvas;
-    public SpriteRenderer Bread;
     public TMP_Text UIscore;
     public TMP_Text EndGameScore;
+    public TMP_Text HighScore;
     public float Score;
+    public float highScore;
     
 
    void Start()
@@ -30,6 +36,7 @@ public class GameController : MonoBehaviour
         Bread.GetComponent<SpriteRenderer>();
         UIscore.GetComponent<TextMeshProUGUI>();
         EndGameScore.GetComponent<TextMeshProUGUI>();
+        HighScore.GetComponent<TextMeshProUGUI>();
         
         // Calculate screen boundaries
         Camera cam = Camera.main;
@@ -92,13 +99,24 @@ public class GameController : MonoBehaviour
         {
             GameOver();
         }
+
+        if(Time.timeScale == 0 && Input.GetKeyDown(KeyCode.Space))
+        {
+            SGS.StartGame();
+        }
+
         UIscore.text = "" + Score;
     }
     void GameOver()
     {
         Time.timeScale = 0;
         EndGameScore.text = "" + Score;
+        HighScore.text = "" + highScore;
         canvas.SetActive(true);
+        if(Score > highScore)
+        {
+            highScore = Score;
+        }
 
     }
     public void StartGame()
