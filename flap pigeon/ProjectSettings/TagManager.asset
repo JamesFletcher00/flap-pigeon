@@ -9,6 +9,7 @@ TagManager:
   - Pipes
   - Score
   - HighScore
+  - Bread
   layers:
   - Default
   - TransparentFX

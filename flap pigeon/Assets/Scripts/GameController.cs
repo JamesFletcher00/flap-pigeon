@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using Unity.VisualScripting;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -16,11 +18,18 @@ public class GameController : MonoBehaviour
     private string pipeTagToMove = "Pipes";
     public bool gameOver = false;
     public GameObject canvas;
+    public SpriteRenderer Bread;
+    public TMP_Text UIscore;
+    public TMP_Text EndGameScore;
+    public float Score;
     
 
    void Start()
     {
         canvas.SetActive(false);
+        Bread.GetComponent<SpriteRenderer>();
+        UIscore.GetComponent<TextMeshProUGUI>();
+        EndGameScore.GetComponent<TextMeshProUGUI>();
         
         // Calculate screen boundaries
         Camera cam = Camera.main;
@@ -83,10 +92,12 @@ public class GameController : MonoBehaviour
         {
             GameOver();
         }
+        UIscore.text = "" + Score;
     }
     void GameOver()
     {
         Time.timeScale = 0;
+        EndGameScore.text = "" + Score;
         canvas.SetActive(true);
 
     }
@@ -95,6 +106,15 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
         gameOver = false;
         canvas.SetActive(false);
+    }
+    public void HideBread()
+    {
+        Score++;
+        Bread.sortingOrder = 0;
+    }
+    public void EnableBread()
+    {
+        Bread.sortingOrder = 2;
     }
     
 }
