@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     public SpriteRenderer Bread;
     private float tileWidth;
     private float screenBounds;
-    private float pipeMoveSpeed = 6f;
+    [SerializeField]private float pipeMoveSpeed = 6f;
     private string pipeTagToMove = "Pipes";
     [Header("End Game")]
     public bool gameOver = false;
@@ -128,6 +128,10 @@ public class GameController : MonoBehaviour
     public void HideBread()
     {
         Score++;
+        if(Score < 10)
+        {
+            pipeMoveSpeed = pipeMoveSpeed * 1.1f;
+        }
         Bread.sortingOrder = 0;
     }
     public void EnableBread()

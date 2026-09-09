@@ -885,6 +885,7 @@ MonoBehaviour:
   PC: {fileID: 1313446457}
   SGS: {fileID: 1367232132}
   Bread: {fileID: 1048390795}
+  pipeMoveSpeed: 6
   gameOver: 0
   canvas: {fileID: 1367232128}
   UIscore: {fileID: 489966544}
@@ -1097,7 +1098,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.17499998}
+  m_Offset: {x: 0, y: 0.14184803}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: -0.42105263}
@@ -1107,7 +1108,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.18, y: 0.18999998}
+  m_Size: {x: 0.18, y: 0.65290177}
   m_EdgeRadius: 0
 --- !u!212 &1048390795
 SpriteRenderer:
