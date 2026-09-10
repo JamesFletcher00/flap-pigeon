@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     public SpriteRenderer Bread;
     private float tileWidth;
     private float screenBounds;
-    [SerializeField]private float pipeMoveSpeed = 3f;
+    [SerializeField]private float pipeMoveSpeed = 4f;
     private string pipeTagToMove = "Pipes";
     [Header("End Game")]
     public bool gameOver = false;
