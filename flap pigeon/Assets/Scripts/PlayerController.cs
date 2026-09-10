@@ -14,13 +14,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.touchCount > 0)
         {
-            rb.linearVelocityY = 5;
-        }
-        if(Input.GetKey(KeyCode.P))
-        {
-            GC.StartGame();
+            Touch touch = Input.GetTouch(0);
+
+            if(touch.phase == TouchPhase.Began)
+            {
+                rb.linearVelocityY = 5;  
+            }
+            
         }
     }
 

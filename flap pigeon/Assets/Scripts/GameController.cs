@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     public SpriteRenderer Bread;
     private float tileWidth;
     private float screenBounds;
-    [SerializeField]private float pipeMoveSpeed = 6f;
+    [SerializeField]private float pipeMoveSpeed = 3f;
     private string pipeTagToMove = "Pipes";
     [Header("End Game")]
     public bool gameOver = false;
@@ -100,9 +100,14 @@ public class GameController : MonoBehaviour
             GameOver();
         }
 
-        if(Time.timeScale == 0 && Input.GetKeyDown(KeyCode.Space))
+        if(Input.touchCount > 0)
         {
-            SGS.StartGame();
+            Touch touch = Input.GetTouch(0);
+
+            if(Time.timeScale == 0 && touch.phase == TouchPhase.Began)
+            {
+                SGS.StartGame();
+            }
         }
 
         UIscore.text = "" + Score;
@@ -128,9 +133,9 @@ public class GameController : MonoBehaviour
     public void HideBread()
     {
         Score++;
-        if(Score < 11)
+        if(Score < 4)
         {
-            pipeMoveSpeed = pipeMoveSpeed * 1.11f;
+            pipeMoveSpeed = pipeMoveSpeed * 1.1f;
         }
         Bread.sortingOrder = 0;
     }
