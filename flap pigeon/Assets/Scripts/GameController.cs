@@ -128,9 +128,9 @@ public class GameController : MonoBehaviour
     public void HideBread()
     {
         Score++;
-        if(Score < 10)
+        if(Score < 11)
         {
-            pipeMoveSpeed = pipeMoveSpeed * 1.1f;
+            pipeMoveSpeed = pipeMoveSpeed * 1.11f;
         }
         Bread.sortingOrder = 0;
     }
